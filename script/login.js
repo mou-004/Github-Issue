@@ -1,5 +1,4 @@
 console.log("Login script loaded");
-
 document.getElementById("login-btn").addEventListener("click", function(event) {
 
     console.log("Login button clicked");
