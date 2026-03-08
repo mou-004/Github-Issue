@@ -21,7 +21,6 @@ document.addEventListener("DOMContentLoaded", function () {
   loadIssues();
   setupEventListeners();
 });
-
 // LOAD ISSUES
 
 async function loadIssues() {
