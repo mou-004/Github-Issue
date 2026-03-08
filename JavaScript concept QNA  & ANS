@@ -1,0 +1,10 @@
+1.What is the difference between var, let, and const?
+ans:: var, let, const: They declare variables. var is old, let can change value, const cannot change value.
+2.What is the spread operator (...)?
+ans:: It expands elements of an array or object into another array, object, or function call.
+3.What is the difference between map(), filter(), and forEach()?
+ans:: map() returns a transformed array, filter() returns elements that match a condition, and forEach() simply loops without returning a new array.
+4.What is an arrow function?
+ans:: A shorter syntax for writing functions using =>.
+5️. What are template literals?
+ans:: Strings written with backticks ` ` that allow variable interpolation using ${}.
