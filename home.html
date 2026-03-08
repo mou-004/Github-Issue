@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GitHub Issues Tracker</title>
+
+<link rel="shortcut icon" href="./assets/github-logo.png">
+
+<link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<script src="./script/test.js" defer></script>
+
+</head>
+
+
+<body class="bg-gray-100 font-[Roboto]">
+
+
+<!-- NAVBAR -->
+<div class="bg-white border-b">
+
+<div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+
+<div class="flex items-center gap-2">
+
+<img src="./assets/github-logo.png" class="w-7">
+<h1 class="font-semibold text-lg">
+GitHub Issues Tracker
+</h1>
+
+</div>
+
+<div class="flex gap-2">
+
+<input id="searchInput"
+type="text"
+placeholder="Search issues..."
+class="input input-bordered w-64"/>
+
+<button id="searchBtn"
+class="btn btn-primary">
+
+ + Search
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+<div class="max-w-6xl mx-auto mt-10">
+
+
+<div class="border rounded-lg bg-white p-4 mb-6">
+
+<div class="flex gap-2">
+
+<button id="allBtn"
+class="tabBtn px-6 py-2 rounded bg-purple-600 text-white">
+
+All
+
+</button>
+
+<button id="openBtn"
+class="tabBtn px-6 py-2 rounded border">
+
+Open
+
+</button>
+
+<button id="closedBtn"
+class="tabBtn px-6 py-2 rounded border">
+
+Closed
+
+</button>
+
+</div>
+
+</div>
+
+<!-- ISSUE -->
+<div class="border rounded-lg bg-white p-6 mb-6 flex justify-between items-center">
+
+<div class="flex items-center gap-3">
+
+<img src="./assets/Aperture.png" class="w-10">
+
+<div>
+
+<h2 id="issueCount" class="font-bold text-lg">
+Issues
+</h2>
+
+<p class="text-gray-500 text-sm">
+Track and manage your project issues
+</p>
+
+</div>
+
+</div>
+
+<div class="flex gap-6 text-sm">
+
+<div class="flex items-center gap-2">
+
+<span class="w-3 h-3 rounded-full bg-green-500"></span>
+Open
+
+</div>
+
+<div class="flex items-center gap-2">
+
+<span class="w-3 h-3 rounded-full bg-purple-500"></span>
+Closed
+
+</div>
+
+</div>
+
+</div>
+
+<!-- SPINNER -->
+<div id="loader"
+class="flex justify-center py-10 hidden">
+
+<span class="loading loading-spinner loading-lg text-primary"></span>
+
+</div>
+
+<div id="issueContainer"
+class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+
+</div>
+
+</div>
+
+<!-- MODAL -->
+<dialog id="issueModal" class="modal">
+
+<div class="modal-box">
+
+<h3 id="modalTitle" class="font-bold text-lg"></h3>
+
+<p id="modalDesc" class="py-3"></p>
+
+<div class="space-y-1 text-sm">
+
+<p><b>Status:</b> <span id="modalStatus"></span></p>
+<p><b>Category:</b> <span id="modalCategory"></span></p>
+<p><b>Priority:</b> <span id="modalPriority"></span></p>
+<p><b>Author:</b> <span id="modalAuthor"></span></p>
+<p><b>Label:</b> <span id="modalLabel"></span></p>
+<p><b>Created:</b> <span id="modalDate"></span></p>
+
+</div>
+
+<div class="modal-action">
+
+<form method="dialog">
+<button class="btn">Close</button>
+</form>
+
+</div>
+
+</div>
+
+</dialog>
+
+
+</body>
+</html>
