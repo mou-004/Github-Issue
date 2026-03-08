@@ -97,7 +97,6 @@ function displayIssues(issues) {
 }
 
 // CREATE ISSUE CARD
-
 function createIssueCard(issue) {
 
   const status = (issue.status || "").toLowerCase().trim();
