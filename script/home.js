@@ -363,7 +363,6 @@ function setupEventListeners() {
 }
 
 // SEARCH
-
 async function performSearch() {
 
   const query = searchInput.value.trim();
