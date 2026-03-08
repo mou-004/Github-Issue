@@ -230,7 +230,6 @@ function generateLabelsHTML(labels, category, priority) {
 }
 
 // OPEN MODAL
-
 async function openModal(issueId) {
 
   try {
