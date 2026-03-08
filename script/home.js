@@ -401,7 +401,6 @@ async function performSearch() {
 }
 
 // HELPERS
-
 function setActiveTab(activeBtn) {
 
   const buttons = [allBtn, openBtn, closedBtn];
