@@ -1,11 +1,8 @@
-console.log("Main script loaded");
-
 const API_BASE = "https://phi-lab-server.vercel.app/api/v1/lab";
 
 const container = document.getElementById("issueContainer");
 const loader = document.getElementById("loader");
 const issueCount = document.getElementById("issueCount");
-
 
 const allBtn = document.getElementById("allBtn");
 const openBtn = document.getElementById("openBtn");
@@ -21,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
   loadIssues();
   setupEventListeners();
 });
+
 // LOAD ISSUES
 
 async function loadIssues() {
@@ -97,6 +95,7 @@ function displayIssues(issues) {
 }
 
 // CREATE ISSUE CARD
+
 function createIssueCard(issue) {
 
   const status = (issue.status || "").toLowerCase().trim();
@@ -230,6 +229,7 @@ function generateLabelsHTML(labels, category, priority) {
 }
 
 // OPEN MODAL
+
 async function openModal(issueId) {
 
   try {
@@ -253,6 +253,9 @@ async function openModal(issueId) {
       issue.priority || "LOW"
     );
 
+    const isClosed = (issue.status || "").toLowerCase().includes("close");
+    const actionText = isClosed ? "Closed by" : "Opened by";
+
     const modalContent = `
 
       <h2 class="text-xl font-bold text-gray-800 mb-2">
@@ -265,7 +268,7 @@ async function openModal(issueId) {
         </span>
 
         <span class="text-sm text-gray-500">
-          Opened by ${issue.author} • ${dateFormatted}
+          ${actionText} ${issue.author} • ${dateFormatted}
         </span>
       </div>
 
@@ -363,6 +366,7 @@ function setupEventListeners() {
 }
 
 // SEARCH
+
 async function performSearch() {
 
   const query = searchInput.value.trim();
@@ -401,6 +405,7 @@ async function performSearch() {
 }
 
 // HELPERS
+
 function setActiveTab(activeBtn) {
 
   const buttons = [allBtn, openBtn, closedBtn];
@@ -431,3 +436,4 @@ function showLoader(show) {
   if (show) loader.classList.remove("hidden");
   else loader.classList.add("hidden");
 }
+
